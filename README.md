@@ -2,8 +2,6 @@
 
 ### Alloy.JMK to compile [STSS](https://www.npmjs.org/package/stss) files with [TiShadow](https://www.npmjs.org/package/tishadow).
 
-### Installation
-
 Open your terminal, `cd` to your **Titanium** project.
 
 ```
