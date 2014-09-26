@@ -6,15 +6,10 @@
 
 Open your terminal, `cd` to your **Titanium** project.
 
-With `wget`
-
 ```
-wget https://raw.githubusercontent.com/kopiro/STSS.jmk/master/alloyjmk.js -O app/alloy.jmk
+if [ ! -f app/alloy.jmk ]; then
+	wget https://raw.githubusercontent.com/kopiro/STSS.jmk/master/alloyjmk.js -O app/alloy.jmk
+else
+	echo "app/alloy.jmk file exists, please merge with 'https://raw.githubusercontent.com/kopiro/STSS.jmk/master/alloyjmk.js'"
+fi
 ```
-
-With `curl`
-
-```
-curl https://raw.githubusercontent.com/kopiro/STSS.jmk/master/alloyjmk.js -o app/alloy.jmk
-```
-
