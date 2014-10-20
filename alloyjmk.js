@@ -42,9 +42,10 @@ function stss(event, logger) {
 			} else if (stat.isFile()) {
 
 				if ( ! /\.stss$/.test(inPathName)) return;
+
 				var key = inPath.replace(event.dir.home, '');
 				var mtime = Math.floor( stat.mtime.getTime() / 1000);
-				if (stssMap[key] === mtime) return;
+				if (fs.existsSync(outPath) && stssMap[key] === mtime) return;
 
 				STSSProcessor.renderSync({
 					file: inPath,
